@@ -1,0 +1,166 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+export const LANGUAGES = [
+  { code: "en", name: "English", native: "English" },
+  { code: "hi", name: "Hindi",   native: "हिन्दी" },
+  { code: "ta", name: "Tamil",   native: "தமிழ்" },
+  { code: "te", name: "Telugu",  native: "తెలుగు" },
+  { code: "bn", name: "Bengali", native: "বাংলা" },
+];
+
+const resources = {
+  en: {
+    translation: {
+      appName: "Jestally", appSuffix: "Live", tagline: "India's Accessible News", live: "LIVE",
+      marketHeatmap: "Market Heatmap", trendingNow: "Trending Now", stories: "stories",
+      playISL: "🤟 Play in Sign", readMore: "Read More", personalImpact: "Personal Impact",
+      student: "Student", investor: "Investor", business: "Business Owner", homemaker: "Homemaker", retiree: "Retiree",
+      detailTitle: "Full Story", whatHappened: "What Happened", whyItHappened: "Why It Happened",
+      howItHappened: "How It Happened", impact: "Impact & Effects", howToResolve: "How to Resolve / What to Do",
+      dataSnapshot: "Data Snapshot", impactByPersona: "Impact by Persona",
+      assistantName: "Jestally AI",
+      chatGreeting: "Hello! I'm your Jestally AI assistant. Ask me anything about the news — I'll give you fast, detailed, personalised answers.",
+      chatPlaceholder: "Ask anything about the news…", send: "Send",
+      context: "Context", noArticle: "No article selected",
+      contextUpdated: "📰 New article loaded:", askExplain: "Ask me to explain, analyse or advise.",
+      seeInSign: "🤟 See in Sign Language", explainSimple: "Here's a simple breakdown:",
+      thinking: "Thinking…", retry: "Retry",
+      onboardingTitle: "Personalise Your News", onboardingSubtitle: "Tell us who you are so we explain news your way.",
+      iAmA: "I am a…", continueBtn: "Continue →", skipNow: "Skip for now",
+      financialSnapshot: "Your financial snapshot", hasHomeLoan: "Home Loan", hasHomeLoanDesc: "Get EMI impact alerts",
+      investsInStocks: "Stocks / Mutual Funds", investsInStocksDesc: "Get market impact alerts",
+      back: "← Back", getStarted: "Get Started 🎯",
+      studentDesc: "Education loans, exam news, campus costs", businessDesc: "Market trends, GST, capital & credit",
+      homemakerDesc: "Grocery prices, gold, household savings", retireeDesc: "FD returns, pension, health insurance",
+      investorDesc: "Stocks, mutual funds, market analysis",
+      closeDetail: "Close", aiAnalysis: "AI Analysis", loadingAnalysis: "Loading full analysis…",
+    },
+  },
+  hi: {
+    translation: {
+      appName: "समाचार", appSuffix: "लाइव", tagline: "भारत का सुलभ समाचार", live: "लाइव",
+      marketHeatmap: "बाज़ार हीटमैप", trendingNow: "अभी ट्रेंडिंग", stories: "खबरें",
+      playISL: "🤟 सांकेतिक भाषा में", readMore: "और पढ़ें", personalImpact: "व्यक्तिगत प्रभाव",
+      student: "छात्र", investor: "निवेशक", business: "व्यापार मालिक", homemaker: "गृहिणी", retiree: "सेवानिवृत्त",
+      detailTitle: "पूरी खबर", whatHappened: "क्या हुआ", whyItHappened: "क्यों हुआ",
+      howItHappened: "कैसे हुआ", impact: "प्रभाव और असर", howToResolve: "समाधान / क्या करें",
+      dataSnapshot: "डेटा स्नैपशॉट", impactByPersona: "व्यक्तित्व अनुसार प्रभाव",
+      assistantName: "समाचार AI",
+      chatGreeting: "नमस्ते! मैं आपका समाचार AI हूँ। किसी भी खबर के बारे में पूछें — तेज़ और विस्तृत जवाब मिलेगा।",
+      chatPlaceholder: "समाचार के बारे में कुछ भी पूछें…", send: "भेजें",
+      context: "संदर्भ", noArticle: "कोई लेख नहीं चुना",
+      contextUpdated: "📰 नया लेख लोड हुआ:", askExplain: "समझाने, प्रभाव या समाधान के बारे में पूछें।",
+      seeInSign: "🤟 सांकेतिक भाषा में देखें", explainSimple: "यहाँ एक सरल विवरण:",
+      thinking: "सोच रहा हूँ…", retry: "पुनः प्रयास",
+      onboardingTitle: "अपनी खबरें व्यक्तिगत बनाएं", onboardingSubtitle: "बताएं आप कौन हैं।",
+      iAmA: "मैं हूँ…", continueBtn: "आगे बढ़ें →", skipNow: "अभी छोड़ें",
+      financialSnapshot: "आपकी वित्तीय स्थिति", hasHomeLoan: "होम लोन", hasHomeLoanDesc: "EMI प्रभाव अलर्ट",
+      investsInStocks: "शेयर / म्यूचुअल फंड", investsInStocksDesc: "बाज़ार प्रभाव अलर्ट",
+      back: "← वापस", getStarted: "शुरू करें 🎯",
+      studentDesc: "शिक्षा ऋण, परीक्षा, कैंपस खर्च", businessDesc: "बाज़ार, GST, पूंजी और ऋण",
+      homemakerDesc: "किराना, सोना, घरेलू बचत", retireeDesc: "FD, पेंशन, स्वास्थ्य बीमा",
+      investorDesc: "शेयर, म्यूचुअल फंड, बाज़ार विश्लेषण",
+      closeDetail: "बंद करें", aiAnalysis: "AI विश्लेषण", loadingAnalysis: "पूर्ण विश्लेषण लोड हो रहा है…",
+    },
+  },
+  ta: {
+    translation: {
+      appName: "செய்தி", appSuffix: "நேரடி", tagline: "இந்தியாவின் அணுகக்கூடிய செய்தி", live: "நேரடி",
+      marketHeatmap: "சந்தை வெப்ப வரைபடம்", trendingNow: "இப்போது டிரெண்டிங்", stories: "செய்திகள்",
+      playISL: "🤟 சைகை மொழியில்", readMore: "மேலும் படிக்க", personalImpact: "தனிப்பட்ட தாக்கம்",
+      student: "மாணவர்", investor: "முதலீட்டாளர்", business: "வணிக உரிமையாளர்", homemaker: "இல்லத்தரசி", retiree: "ஓய்வுபெற்றவர்",
+      detailTitle: "முழு கதை", whatHappened: "என்ன நடந்தது", whyItHappened: "ஏன் நடந்தது",
+      howItHappened: "எப்படி நடந்தது", impact: "தாக்கம் மற்றும் விளைவுகள்", howToResolve: "தீர்வு / என்ன செய்வது",
+      dataSnapshot: "தரவு சுருக்கம்", impactByPersona: "நபர் வகையால் தாக்கம்",
+      assistantName: "செய்தி AI",
+      chatGreeting: "வணக்கம்! நான் உங்கள் செய்தி AI. எந்த செய்தியைப் பற்றியும் கேளுங்கள் — வேகமான பதில் தருவேன்.",
+      chatPlaceholder: "செய்தி பற்றி எதையும் கேளுங்கள்…", send: "அனுப்பு",
+      context: "சூழல்", noArticle: "கட்டுரை தேர்ந்தெடுக்கவில்லை",
+      contextUpdated: "📰 புதிய கட்டுரை:", askExplain: "விளக்கம் அல்லது தாக்கம் கேளுங்கள்.",
+      seeInSign: "🤟 சைகை மொழியில் காண்க", explainSimple: "இதோ ஒரு எளிய விளக்கம்:",
+      thinking: "யோசிக்கிறேன்…", retry: "மீண்டும் முயற்சி",
+      onboardingTitle: "உங்கள் செய்தியை தனிப்பயனாக்குங்கள்", onboardingSubtitle: "நீங்கள் யார் என்று சொல்லுங்கள்.",
+      iAmA: "நான்…", continueBtn: "தொடரவும் →", skipNow: "இப்போது தவிர்க்கவும்",
+      financialSnapshot: "உங்கள் நிதி நிலை", hasHomeLoan: "வீட்டு கடன்", hasHomeLoanDesc: "EMI தாக்க விழிப்பூட்டல்",
+      investsInStocks: "பங்குகள் / மியூச்சுவல் ஃபண்ட்", investsInStocksDesc: "சந்தை தாக்க விழிப்பூட்டல்",
+      back: "← திரும்பு", getStarted: "தொடங்குங்கள் 🎯",
+      studentDesc: "கல்விக் கடன், தேர்வு செய்திகள்", businessDesc: "சந்தை போக்குகள், GST, மூலதனம்",
+      homemakerDesc: "மளிகை விலைகள், தங்கம், சேமிப்பு", retireeDesc: "FD வருவாய், ஓய்வூதியம், காப்பீடு",
+      investorDesc: "பங்குகள், மியூச்சுவல் ஃபண்ட், சந்தை பகுப்பாய்வு",
+      closeDetail: "மூடு", aiAnalysis: "AI பகுப்பாய்வு", loadingAnalysis: "பகுப்பாய்வு ஏற்றுகிறது…",
+    },
+  },
+  te: {
+    translation: {
+      appName: "వార్తలు", appSuffix: "లైవ్", tagline: "భారతదేశపు అందుబాటు వార్తలు", live: "లైవ్",
+      marketHeatmap: "మార్కెట్ హీట్‌మ్యాప్", trendingNow: "ఇప్పుడు ట్రెండింగ్", stories: "వార్తలు",
+      playISL: "🤟 సంకేత భాషలో", readMore: "మరింత చదవండి", personalImpact: "వ్యక్తిగత ప్రభావం",
+      student: "విద్యార్థి", investor: "పెట్టుబడిదారుడు", business: "వ్యాపార యజమాని", homemaker: "గృహిణి", retiree: "పదవీ విరమణ",
+      detailTitle: "పూర్తి వార్త", whatHappened: "ఏమి జరిగింది", whyItHappened: "ఎందుకు జరిగింది",
+      howItHappened: "ఎలా జరిగింది", impact: "ప్రభావం మరియు పర్యవసానాలు", howToResolve: "పరిష్కారం / ఏమి చేయాలి",
+      dataSnapshot: "డేటా స్నాప్‌షాట్", impactByPersona: "వ్యక్తిత్వం ప్రకారం ప్రభావం",
+      assistantName: "వార్తలు AI",
+      chatGreeting: "నమస్కారం! నేను మీ వార్తలు AI. ఏ వార్త గురించైనా అడగండి — వేగంగా, వివరంగా సమాధానం ఇస్తాను.",
+      chatPlaceholder: "వార్తల గురించి ఏదైనా అడగండి…", send: "పంపు",
+      context: "సందర్భం", noArticle: "వ్యాసం ఏదీ ఎంచుకోలేదు",
+      contextUpdated: "📰 కొత్త వ్యాసం:", askExplain: "వివరణ లేదా ప్రభావం అడగండి.",
+      seeInSign: "🤟 సంకేత భాషలో చూడండి", explainSimple: "ఇదిగో సరళమైన వివరణ:",
+      thinking: "ఆలోచిస్తున్నాను…", retry: "మళ్ళీ ప్రయత్నించు",
+      onboardingTitle: "మీ వార్తలను వ్యక్తిగతీకరించండి", onboardingSubtitle: "మీరు ఎవరో చెప్పండి.",
+      iAmA: "నేను…", continueBtn: "కొనసాగించు →", skipNow: "ఇప్పుడు దాటవేయి",
+      financialSnapshot: "మీ ఆర్థిక స్నాప్‌షాట్", hasHomeLoan: "హోమ్ లోన్", hasHomeLoanDesc: "EMI ప్రభావ హెచ్చరికలు",
+      investsInStocks: "స్టాక్స్ / మ్యూచువల్ ఫండ్స్", investsInStocksDesc: "మార్కెట్ ప్రభావ హెచ్చరికలు",
+      back: "← వెనక్కు", getStarted: "ప్రారంభించండి 🎯",
+      studentDesc: "విద్యా రుణాలు, పరీక్ష వార్తలు", businessDesc: "మార్కెట్ ధోరణులు, GST, మూలధనం",
+      homemakerDesc: "కిరాణా ధరలు, బంగారం, పొదుపు", retireeDesc: "FD రాబడి, పెన్షన్, ఆరోగ్య బీమా",
+      investorDesc: "స్టాక్స్, మ్యూచువల్ ఫండ్స్, మార్కెట్ విశ్లేషణ",
+      closeDetail: "మూసివేయి", aiAnalysis: "AI విశ్లేషణ", loadingAnalysis: "విశ్లేషణ లోడవుతోంది…",
+    },
+  },
+  bn: {
+    translation: {
+      appName: "সংবাদ", appSuffix: "লাইভ", tagline: "ভারতের সুলভ সংবাদ", live: "লাইভ",
+      marketHeatmap: "বাজার হিটম্যাপ", trendingNow: "এখন ট্রেন্ডিং", stories: "সংবাদ",
+      playISL: "🤟 সাংকেতিক ভাষায়", readMore: "আরও পড়ুন", personalImpact: "ব্যক্তিগত প্রভাব",
+      student: "ছাত্র", investor: "বিনিয়োগকারী", business: "ব্যবসার মালিক", homemaker: "গৃহিণী", retiree: "অবসরপ্রাপ্ত",
+      detailTitle: "সম্পূর্ণ গল্প", whatHappened: "কী হয়েছে", whyItHappened: "কেন হয়েছে",
+      howItHappened: "কীভাবে হয়েছে", impact: "প্রভাব ও পরিণতি", howToResolve: "সমাধান / কী করবেন",
+      dataSnapshot: "ডেটা স্ন্যাপশট", impactByPersona: "ব্যক্তিত্ব অনুযায়ী প্রভাব",
+      assistantName: "সংবাদ AI",
+      chatGreeting: "নমস্কার! আমি আপনার সংবাদ AI। যেকোনো সংবাদ সম্পর্কে জিজ্ঞেস করুন — দ্রুত ও বিস্তারিত উত্তর পাবেন।",
+      chatPlaceholder: "সংবাদ সম্পর্কে যেকোনো কিছু জিজ্ঞেস করুন…", send: "পাঠান",
+      context: "প্রসঙ্গ", noArticle: "কোনো নিবন্ধ নির্বাচিত নয়",
+      contextUpdated: "📰 নতুন নিবন্ধ:", askExplain: "ব্যাখ্যা বা প্রভাব সম্পর্কে জিজ্ঞেস করুন।",
+      seeInSign: "🤟 সাংকেতিক ভাষায় দেখুন", explainSimple: "এখানে একটি সহজ ব্যাখ্যা:",
+      thinking: "ভাবছি…", retry: "আবার চেষ্টা করুন",
+      onboardingTitle: "আপনার সংবাদ ব্যক্তিগতকৃত করুন", onboardingSubtitle: "আপনি কে তা বলুন।",
+      iAmA: "আমি হলাম…", continueBtn: "চালিয়ে যান →", skipNow: "এখন এড়িয়ে যান",
+      financialSnapshot: "আপনার আর্থিক স্ন্যাপশট", hasHomeLoan: "হোম লোন", hasHomeLoanDesc: "EMI প্রভাব সতর্কতা",
+      investsInStocks: "শেয়ার / মিউচুয়াল ফান্ড", investsInStocksDesc: "বাজার প্রভাব সতর্কতা",
+      back: "← ফিরে যান", getStarted: "শুরু করুন 🎯",
+      studentDesc: "শিক্ষা ঋণ, পরীক্ষার সংবাদ", businessDesc: "বাজার প্রবণতা, GST, মূলধন",
+      homemakerDesc: "মুদিখানার দাম, সোনা, সঞ্চয়", retireeDesc: "FD রিটার্ন, পেনশন, স্বাস্থ্য বীমা",
+      investorDesc: "শেয়ার, মিউচুয়াল ফান্ড, বাজার বিশ্লেষণ",
+      closeDetail: "বন্ধ করুন", aiAnalysis: "AI বিশ্লেষণ", loadingAnalysis: "বিশ্লেষণ লোড হচ্ছে…",
+    },
+  },
+};
+
+if (!i18n.isInitialized) {
+  i18n
+    .use(initReactI18next)
+    .init({
+      resources,
+      lng: localStorage.getItem("i18nextLng") ?? "en",
+      fallbackLng: "en",
+      interpolation: { escapeValue: false },
+    });
+}
+
+i18n.on("languageChanged", (lng) => {
+  localStorage.setItem("i18nextLng", lng);
+  document.documentElement.lang = lng;
+});
+
+export default i18n;
